@@ -1,7 +1,7 @@
-# algorithm_leetcode
+# algorithm
 
 #### Description
-乐扣算法练习 
+算法练习 
 
 #### Software Architecture
 Software architecture description

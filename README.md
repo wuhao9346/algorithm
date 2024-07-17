@@ -1,7 +1,7 @@
-# algorithm_leetcode
+# algorithm
 
 #### 介绍
-乐扣算法练习 
+算法练习 
 
 #### 软件架构
 软件架构说明
