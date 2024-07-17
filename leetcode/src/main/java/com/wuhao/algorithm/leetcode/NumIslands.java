@@ -3,48 +3,18 @@ package com.wuhao.algorithm.leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * 200.岛屿数量
- */
 public class NumIslands {
-    public static void main(String[] args) {
-        System.out.println(numIslands(new char[][]{
-                new char[]{'1', '1', '1', '1', '0'},
-                new char[]{'1', '1', '0', '1', '0'},
-                new char[]{'1', '1', '0', '0', '0'},
-                new char[]{'0', '0', '0', '0', '0'}
-        }));
-        System.out.println(numIslands(new char[][]{
-                new char[]{'1', '1', '0', '0', '0'},
-                new char[]{'1', '1', '0', '0', '0'},
-                new char[]{'0', '0', '1', '0', '0'},
-                new char[]{'0', '0', '0', '1', '1'}
-        }));
-        System.out.println(numIslands(new char[][]{
-                new char[]{'1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1'},
-                new char[]{'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0'},
-                new char[]{'1', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '1', '1', '0', '1', '1', '1'},
-                new char[]{'0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '0', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '0', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '0', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '1', '1', '1', '0', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '1', '0'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '1', '0', '0'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'}
-        }));
+    public static final String NAME = "200.岛屿数量";
+
+    public int numIslandsBFS(char[][] grid) {
+        return numIslands(grid, this::bfs);
     }
 
-    public static int numIslands(char[][] grid) {
+    public int numIslandsDFS(char[][] grid) {
+        return numIslands(grid, this::dfs);
+    }
+
+    private int numIslands(char[][] grid, FSAction fsAction) {
         if (grid.length < 1) {
             return 0;
         }
@@ -53,15 +23,14 @@ public class NumIslands {
             for (int j = 0; j < grid[i].length; j++) {
                 if (grid[i][j] == '1') {
                     count++;
-//                    bfs(i, j, grid);
-                    dfs(i, j, grid);
+                    fsAction.fs(i, j, grid);
                 }
             }
         }
         return count;
     }
 
-    private static void dfs(int i, int j, char[][] grid) {
+    private void dfs(int i, int j, char[][] grid) {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] == '0') {
             return;
         }
@@ -72,7 +41,7 @@ public class NumIslands {
         dfs(i, j + 1, grid);
     }
 
-    private static void bfs(int i, int j, char[][] grid) {
+    private void bfs(int i, int j, char[][] grid) {
         int rowSize = grid.length;
         int columnSize = grid[0].length;
         Queue<int[]> deque = new LinkedList<>();
@@ -99,5 +68,10 @@ public class NumIslands {
                 deque.add(new int[]{rowIndex, columnIndex + 1});
             }
         }
+    }
+
+    @FunctionalInterface
+    private interface FSAction {
+        void fs(int i, int j, char[][] grid);
     }
 }

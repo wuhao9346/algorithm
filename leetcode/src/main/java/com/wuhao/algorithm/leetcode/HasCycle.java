@@ -6,6 +6,8 @@ import com.wuhao.algorithm.leetcode.structure.ListNode;
  * 141.环形链表
  */
 public class HasCycle {
+    public static final String NAME = "141.环形链表";
+
     public boolean hasCycle(ListNode head) {
         if (head == null) {
             return false;

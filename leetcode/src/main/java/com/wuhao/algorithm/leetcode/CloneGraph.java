@@ -11,21 +11,11 @@ import static com.wuhao.algorithm.leetcode.structure.Node.buildGraph;
  * 133.克隆图
  */
 public class CloneGraph {
+    public static final String NAME = "133.克隆图";
 
-    public static void main(String[] args) {
-        cloneGraph(buildGraph(new int[][]{
-                new int[]{2, 4}, new int[]{1, 3}, new int[]{2, 4}, new int[]{1, 3}
-        }));
-        cloneGraph(buildGraph(new int[][]{
-                new int[]{}
-        }));
-        cloneGraph(buildGraph(new int[][]{
-        }));
-    }
+    public Map<Node, Node> cloneGraphMap = new HashMap<>();
 
-    private static Map<Node, Node> cloneGraphMap = new HashMap<>();
-
-    public static Node cloneGraph(Node node) {
+    public Node cloneGraph(Node node) {
         if (node == null) {
             return null;
         }

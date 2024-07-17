@@ -9,13 +9,10 @@ import static com.wuhao.algorithm.leetcode.structure.ListNode.buildListNode;
  * LCR 024.反转链表
  */
 public class ReverseList {
-    public static void main(String[] args) {
-        print(reverseList(buildListNode(new int[]{1, 2, 3, 4, 5})));
-        print(reverseList(buildListNode(new int[]{1, 2})));
-        print(reverseList(buildListNode(new int[]{})));
-    }
+    public static final String NAME="LCR 024.反转链表";
 
-    public static ListNode reverseList(ListNode head) {
+
+    public ListNode reverseList(ListNode head) {
         ListNode prevNode = null;
         while (head != null) {
             ListNode next = head.next;

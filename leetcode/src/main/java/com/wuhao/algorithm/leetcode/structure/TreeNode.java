@@ -1,8 +1,10 @@
 package com.wuhao.algorithm.leetcode.structure;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Queue;
 
 public class TreeNode {
@@ -61,5 +63,52 @@ public class TreeNode {
             nodes[i] = new TreeNode(values[i], left, right);
         }
         return nodes[0];
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TreeNode treeNode = (TreeNode) o;
+        return val == treeNode.val && Objects.equals(left, treeNode.left)
+                && Objects.equals(right, treeNode.right)
+                && Objects.equals(next, treeNode.next);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, left, right, next);
+    }
+
+    @Override
+    public String toString() {
+        List<TreeNode> nodeList = new ArrayList<>();
+        nodeList.add(this);
+        for (int i = 0; i < nodeList.size(); i++) {
+            TreeNode node = nodeList.get(i);
+            if (node == null) {
+                continue;
+            }
+            if (node.left != null) {
+                while (nodeList.size() < 2 * i + 1) {
+                    nodeList.add(null);
+                }
+                nodeList.add(node.left);
+            }
+            if (node.right != null) {
+                while (nodeList.size() < 2 * i + 2) {
+                    nodeList.add(null);
+                }
+                nodeList.add(node.right);
+            }
+        }
+        return Arrays.toString(nodeList.stream()
+                .map(treeNode -> treeNode == null ? null : treeNode.val)
+                .toArray(Integer[]::new));
+    }
+
+    public static void main(String[] args) {
+        TreeNode node = TreeNode.buildTree(new Integer[]{1, 2, 3, 4, 5, null, 6});
+        System.out.println(node);
     }
 }
