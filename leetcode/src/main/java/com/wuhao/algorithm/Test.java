@@ -2012,31 +2012,6 @@ public class Test {
         return sumNumbers(root.left, sum) + sumNumbers(root.right, sum);
     }
 
-    public static void maxPathSum() {
-        System.out.println(maxPathSum(buildTree(new Integer[]{1, 2, 3})));
-        System.out.println(maxPathSum(buildTree(new Integer[]{-10, 9, 20, null, null, 15, 7})));
-    }
-
-    private static int maxPathSum = Integer.MIN_VALUE;
-
-    public static int maxPathSum(TreeNode root) {
-        maxGain(root);
-        return maxPathSum;
-    }
-
-    public static int maxGain(TreeNode node) {
-        if (node == null) {
-            return 0;
-        }
-        if (node.left == null && node.right == null) {
-            return node.val;
-        }
-        int leftMaxGain = Math.max(maxGain(node.left), 0);
-        int rightMaxGain = Math.max(maxGain(node.right), 0);
-        maxPathSum = Math.max(maxPathSum, leftMaxGain + rightMaxGain + node.val);
-        return node.val + Math.max(leftMaxGain, rightMaxGain);
-    }
-
     public static void main(String[] args) {
 
     }

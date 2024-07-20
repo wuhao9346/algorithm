@@ -39,4 +39,20 @@ public class Node {
         }
         return nodes[0];
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("[").append(val).append("->");
+        if (next == null) {
+            builder.append(next);
+        } else {
+            builder.append(next.val);
+        }
+        if (random != null) {
+            builder.append("|").append(random.val);
+        }
+        builder.append("]");
+        return builder.toString();
+    }
 }
