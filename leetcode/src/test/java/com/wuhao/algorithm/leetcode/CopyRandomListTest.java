@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.Node;
+import com.wuhao.algorithm.common.structure.Node;
 import org.junit.jupiter.api.AssertionFailureBuilder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

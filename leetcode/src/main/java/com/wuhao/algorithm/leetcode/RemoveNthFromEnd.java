@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
+import com.wuhao.algorithm.common.structure.ListNode;
 
 public class RemoveNthFromEnd {
     public static final String NAME = "19. 删除链表的倒数第 N 个结点";

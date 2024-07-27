@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
+import com.wuhao.algorithm.common.structure.ListNode;
 
 /**
  * 141.环形链表

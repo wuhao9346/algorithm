@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.TreeNode;
+import com.wuhao.algorithm.common.structure.TreeNode;
 
 public class MaxPathSum {
     public static final String NAME = "124.二叉树中的最大路径和";

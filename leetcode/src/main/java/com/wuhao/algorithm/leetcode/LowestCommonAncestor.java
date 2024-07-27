@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.TreeNode;
+import com.wuhao.algorithm.common.structure.TreeNode;
 
 public class LowestCommonAncestor {
     public static final String NAME = "236.二叉树的最近公共祖先";

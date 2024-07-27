@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
+import com.wuhao.algorithm.common.structure.ListNode;
 
 public class DeleteDuplicates {
     public static final String NAME = "82. 删除排序链表中的重复元素 II";

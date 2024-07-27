@@ -1,7 +1,7 @@
 package com.wuhao.algorithm;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
-import com.wuhao.algorithm.leetcode.structure.TreeNode;
+import com.wuhao.algorithm.common.structure.ListNode;
+import com.wuhao.algorithm.common.structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,9 +17,9 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
-import static com.wuhao.algorithm.leetcode.structure.ListNode.buildListNode;
-import static com.wuhao.algorithm.leetcode.structure.TreeNode.buildTree;
-import static com.wuhao.algorithm.leetcode.structure.TreeNode.print;
+import static com.wuhao.algorithm.common.structure.ListNode.buildListNode;
+import static com.wuhao.algorithm.common.structure.TreeNode.buildTree;
+import static com.wuhao.algorithm.common.structure.TreeNode.print;
 
 public class Test {
 

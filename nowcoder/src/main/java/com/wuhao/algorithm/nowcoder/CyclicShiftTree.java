@@ -1,7 +1,7 @@
 package com.wuhao.algorithm.nowcoder;
 
 
-import com.wuhao.algorithm.leetcode.structure.TreeNode;
+import com.wuhao.algorithm.common.structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

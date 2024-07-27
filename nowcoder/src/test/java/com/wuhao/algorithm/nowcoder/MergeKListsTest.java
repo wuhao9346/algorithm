@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.nowcoder;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
+import com.wuhao.algorithm.common.structure.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

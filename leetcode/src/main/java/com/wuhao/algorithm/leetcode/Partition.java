@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
+import com.wuhao.algorithm.common.structure.ListNode;
 
 public class Partition {
     public static final String NAME = "86. 分隔链表";

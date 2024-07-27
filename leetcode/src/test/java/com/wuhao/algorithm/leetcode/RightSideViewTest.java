@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.TreeNode;
+import com.wuhao.algorithm.common.structure.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.wuhao.algorithm.leetcode.structure.TreeNode.buildTree;
+import static com.wuhao.algorithm.common.structure.TreeNode.buildTree;
 
 @DisplayName(RightSideView.NAME)
 class RightSideViewTest {

@@ -1,8 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
-
-import static com.wuhao.algorithm.leetcode.structure.ListNode.*;
+import com.wuhao.algorithm.common.structure.ListNode;
 
 /**
  * LCR 024.反转链表

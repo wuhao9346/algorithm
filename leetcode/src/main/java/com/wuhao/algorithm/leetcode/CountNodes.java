@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.TreeNode;
+import com.wuhao.algorithm.common.structure.TreeNode;
 
 public class CountNodes {
     public static final String NAME = "222.完全二叉树的节点个数";

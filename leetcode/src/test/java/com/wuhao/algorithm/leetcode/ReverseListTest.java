@@ -1,6 +1,6 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.structure.ListNode;
+import com.wuhao.algorithm.common.structure.ListNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,7 +8,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com.wuhao.algorithm.leetcode.structure.ListNode.buildListNode;
+import static com.wuhao.algorithm.common.structure.ListNode.buildListNode;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName(CloneGraph.NAME)
 class ReverseListTest {
