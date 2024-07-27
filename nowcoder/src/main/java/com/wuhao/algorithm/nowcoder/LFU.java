@@ -1,5 +1,7 @@
 package com.wuhao.algorithm.nowcoder;
 
+import com.wuhao.algorithm.common.structure.Entry;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -92,21 +94,6 @@ public class LFU {
             prev.next.prev = entry;
             entry.prev = prev;
             prev.next = entry;
-        }
-
-        private static final class Entry {
-            private int key;
-            private int value;
-            private Entry prev;
-            private Entry next;
-            private int times;
-
-            public Entry() {
-            }
-
-            private Entry(int key) {
-                this.key = key;
-            }
         }
     }
 }

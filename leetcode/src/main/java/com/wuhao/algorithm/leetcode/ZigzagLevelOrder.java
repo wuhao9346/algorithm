@@ -3,15 +3,12 @@ package com.wuhao.algorithm.leetcode;
 import com.wuhao.algorithm.leetcode.structure.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import static com.wuhao.algorithm.leetcode.structure.TreeNode.buildTree;
-
 public class ZigzagLevelOrder {
-    public static final String NAME="103.二叉树的锯齿形层序遍历";
+    public static final String NAME = "103.二叉树的锯齿形层序遍历";
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();

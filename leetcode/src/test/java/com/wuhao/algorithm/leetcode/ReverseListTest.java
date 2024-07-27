@@ -9,7 +9,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static com.wuhao.algorithm.leetcode.structure.ListNode.buildListNode;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName(CloneGraph.NAME)
 class ReverseListTest {

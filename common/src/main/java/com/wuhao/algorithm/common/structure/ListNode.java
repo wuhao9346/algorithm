@@ -1,4 +1,4 @@
-package com.wuhao.algorithm.leetcode.structure;
+package com.wuhao.algorithm.common.structure;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,9 +9,16 @@ public class ListNode {
     public int val;
     public ListNode next;
 
+    public ListNode() {
+    }
+
     public ListNode(int x) {
         val = x;
-        next = null;
+    }
+
+    public ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 
     private static ListNode[] buildListNodeArray(int[] nums) {

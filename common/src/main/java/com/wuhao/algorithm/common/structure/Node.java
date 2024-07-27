@@ -1,4 +1,4 @@
-package com.wuhao.algorithm.leetcode.structure;
+package com.wuhao.algorithm.common.structure;
 
 import java.util.ArrayList;
 import java.util.List;

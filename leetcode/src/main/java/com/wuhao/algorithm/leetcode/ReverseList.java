@@ -3,13 +3,12 @@ package com.wuhao.algorithm.leetcode;
 import com.wuhao.algorithm.leetcode.structure.ListNode;
 
 import static com.wuhao.algorithm.leetcode.structure.ListNode.*;
-import static com.wuhao.algorithm.leetcode.structure.ListNode.buildListNode;
 
 /**
  * LCR 024.反转链表
  */
 public class ReverseList {
-    public static final String NAME="LCR 024.反转链表";
+    public static final String NAME = "LCR 024.反转链表";
 
 
     public ListNode reverseList(ListNode head) {

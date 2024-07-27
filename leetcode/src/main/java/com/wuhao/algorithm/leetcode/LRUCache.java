@@ -1,11 +1,11 @@
-package com.wuhao.algorithm.nowcoder;
+package com.wuhao.algorithm.leetcode;
 
+import com.wuhao.algorithm.common.structure.Entry;
 
 import java.util.HashMap;
 
-public class LRUCache {
-
-    public static final String NAME = "NC93 设计LRU缓存结构";
+class LRUCache {
+    public static final String NAME = "146. LRU 缓存";
     private final int capacity;
     private final HashMap<Integer, Entry> entryMap = new HashMap<>();
     private int size = 0;
@@ -26,10 +26,10 @@ public class LRUCache {
             return -1;
         }
         moveHead(entry);
-        return head.next.value;
+        return entry.value;
     }
 
-    public void set(int key, int value) {
+    public void put(int key, int value) {
         Entry entry = entryMap.get(key);
         if (entry == null) {
             entry = new Entry(key);
@@ -44,6 +44,7 @@ public class LRUCache {
             tail.prev.next.prev = null;
             tail.prev.next.next = null;
             tail.prev.next = tail;
+            size--;
         }
     }
 
@@ -56,22 +57,9 @@ public class LRUCache {
             entry.next.prev = entry.prev;
         }
         entry.next = head.next;
-        head.next.prev=entry;
+        head.next.prev = entry;
         entry.prev = head;
         head.next = entry;
     }
 
-    private static final class Entry {
-        private int key;
-        private int value;
-        private Entry prev;
-        private Entry next;
-
-        public Entry() {
-        }
-
-        private Entry(int key) {
-            this.key = key;
-        }
-    }
 }

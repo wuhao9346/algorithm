@@ -1,6 +1,5 @@
 package com.wuhao.algorithm.leetcode;
 
-import com.wuhao.algorithm.leetcode.CountNodes;
 import com.wuhao.algorithm.leetcode.structure.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

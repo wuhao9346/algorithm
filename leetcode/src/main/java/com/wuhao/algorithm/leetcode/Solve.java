@@ -1,12 +1,10 @@
 package com.wuhao.algorithm.leetcode;
 
-import static com.wuhao.algorithm.leetcode.utils.PrintUtils.print;
-
 /**
  * 130.被围绕的区域
  */
 public class Solve {
-    public static final String NAME="130.被围绕的区域";
+    public static final String NAME = "130.被围绕的区域";
 
     public void solve(char[][] board) {
         int rowSize = board.length;
